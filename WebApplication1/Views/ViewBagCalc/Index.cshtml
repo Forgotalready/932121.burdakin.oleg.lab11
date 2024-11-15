@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")">
+</head>
+<body>
+<header>
+    <h3>Backend1</h3>
+    <a href="@Url.Action("Index", "Home")">Home</a>
+</header>
+<main>
+    <h1>PassUsingViewBag</h1>
+    <p>Rand Value First: @ViewBag.first</p>
+    <p>Rand Value Second: @ViewBag.second</p>
+    <p>Add:</p>
+    <p>@ViewBag.first + @ViewBag.second = @ViewBag.sum</p>
+    <p>Mul:</p>
+    <p>@ViewBag.first * @ViewBag.second = @ViewBag.mul</p>
+    <p>Div:</p>
+    <p>@ViewBag.first / @ViewBag.second = @ViewBag.divide</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>HomePage Backend1</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")">
+    </head>
+    <body>
+        <div>
+            <header>
+                <h3>Backend1</h3>
+                <a href="@Url.Action("Index", "Home")">Home</a>
+            </header>
+            <main>
+                <h1>Calc Service Demonstration</h1>
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index", "ModelCalc")">Using Model Calc</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "ViewDataCalc")">Using ViewData Calc</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Index", "ViewBagCalc")">Using ViewBag Calc</a>
+                    </li>
+                    <li>
+                        <a href="./">Using Service Injection Calc</a>
+                    </li>
+                </ul>
+            </main>
+            <footer>
+                2019 - Backend1
+            </footer>
+        </div>
+    </body>
+</html>

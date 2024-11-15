@@ -1,0 +1,32 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: black;
+    color: gray;
+    height: 50px;
+    padding: 30px;
+}
+
+header > *
+{
+    margin-right : 30px;
+}
+
+main
+{
+    padding: 30px;
+}
+
+li
+{
+    margin-left: 20px;
+}

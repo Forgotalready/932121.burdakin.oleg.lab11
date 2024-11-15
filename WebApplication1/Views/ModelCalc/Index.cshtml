@@ -1,0 +1,31 @@
+﻿@model Dictionary<String, String>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")">
+</head>
+<body>
+<header>
+    <h3>Backend1</h3>
+    <a href="@Url.Action("Index", "Home")">Home</a>
+</header>
+<main>
+    <h1>PassUsingModel</h1>
+    <p>Rand Value First: @Model["first"]</p>
+    <p>Rand Value Second: @Model["second"]</p>
+    <p>Add:</p>
+    <p>@Model["first"] + @Model["second"] = @Model["sum"]</p>
+    <p>Mul:</p>
+    <p>@Model["first"] * @Model["second"] = @Model["mul"]</p>
+    <p>Div:</p>
+    <p>@Model["first"] / @Model["second"] = @Model["divide"]</p>
+</main>
+</body>
+</html>
