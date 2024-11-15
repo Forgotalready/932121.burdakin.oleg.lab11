@@ -1,5 +1,8 @@
-﻿@{
-    Layout = null;
+﻿@using WebApplication1.Service
+
+@inject CalculationService calculationService
+@{
+    var data = calculationService.Calculate();     
 }
 
 <!DOCTYPE html>
@@ -16,14 +19,14 @@
 </header>
 <main>
     <h1>AccsessServiceDirectly</h1>
-    <p>Rand Value First: @ViewData["first"]</p>
-    <p>Rand Value Second: @ViewData["second"]</p>
+    <p>Rand Value First: @data["first"]</p>
+    <p>Rand Value Second: @data["second"]</p>
     <p>Add:</p>
-    <p>@ViewData["first"] + @ViewData["second"] = @ViewData["sum"]</p>
+    <p>@data["first"] + @data["second"] = @data["sum"]</p>
     <p>Mul:</p>
-    <p>@ViewData["first"] * @ViewData["second"] = @ViewData["mul"]</p>
+    <p>@data["first"] * @data["second"] = @data["mul"]</p>
     <p>Div:</p>
-    <p>@ViewData["first"] / @ViewData["second"] = @ViewData["divide"]</p>
+    <p>@data["first"] / @data["second"] = @data["divide"]</p>
 </main>
 </body>
 </html>
