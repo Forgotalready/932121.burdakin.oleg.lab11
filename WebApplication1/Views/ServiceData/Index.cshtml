@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")">
+</head>
+<body>
+<header>
+    <h3>Backend1</h3>
+    <a href="@Url.Action("Index", "Home")">Home</a>
+</header>
+<main>
+    <h1>AccsessServiceDirectly</h1>
+    <p>Rand Value First: @ViewData["first"]</p>
+    <p>Rand Value Second: @ViewData["second"]</p>
+    <p>Add:</p>
+    <p>@ViewData["first"] + @ViewData["second"] = @ViewData["sum"]</p>
+    <p>Mul:</p>
+    <p>@ViewData["first"] * @ViewData["second"] = @ViewData["mul"]</p>
+    <p>Div:</p>
+    <p>@ViewData["first"] / @ViewData["second"] = @ViewData["divide"]</p>
+</main>
+</body>
+</html>
