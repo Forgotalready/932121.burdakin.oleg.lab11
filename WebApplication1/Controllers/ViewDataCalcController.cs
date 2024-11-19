@@ -15,15 +15,9 @@ public class ViewDataCalcController : Controller
     ViewData["first"] = first;
     ViewData["second"] = second;
     ViewData["sum"] = first + second;
+    ViewData["subtract"] = first - second;
     ViewData["mul"] = first * second;
-    if (second != 0)
-    {
-      ViewData["divide"] = first / second;
-    }
-    else
-    {
-      ViewData["divide"] = "Division by zero";
-    }
+    ViewData["divide"] = (second != 0) ? first / second : "Division by zero";
   }
 
   public IActionResult Index()

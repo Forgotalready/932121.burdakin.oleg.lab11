@@ -1,31 +1,23 @@
 ﻿@model Dictionary<String, String>
 
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
-<!DOCTYPE html>
+@{
+    ViewBag.Title = "Model";
+}
 
-<html>
-<head>
-    <title>title</title>
-    <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")">
-</head>
-<body>
-<header>
-    <h3>Backend1</h3>
-    <a href="@Url.Action("Index", "Home")">Home</a>
-</header>
 <main>
     <h1>PassUsingModel</h1>
-    <p>Rand Value First: @Model["first"]</p>
-    <p>Rand Value Second: @Model["second"]</p>
-    <p>Add:</p>
+    <p><b>Rand Value First: @Model["first"]</b></p>
+    <p><b>Rand Value Second: @Model["second"]</b></p>
+    <b>Add:</b>
     <p>@Model["first"] + @Model["second"] = @Model["sum"]</p>
-    <p>Mul:</p>
+    <b>Sub:</b>
+    <p>@Model["first"] - @Model["second"] = @Model["subtract"]</p>
+    <b>Mul:</b>
     <p>@Model["first"] * @Model["second"] = @Model["mul"]</p>
-    <p>Div:</p>
+    <b>Div:</b>
     <p>@Model["first"] / @Model["second"] = @Model["divide"]</p>
 </main>
-</body>
-</html>

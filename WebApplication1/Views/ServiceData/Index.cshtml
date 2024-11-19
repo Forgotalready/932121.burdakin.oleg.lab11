@@ -2,31 +2,24 @@
 
 @inject CalculationService calculationService
 @{
-    var data = calculationService.Calculate();     
+    var data = calculationService.Calculate();
+    ViewBag.Title = "Service";
 }
 
-<!DOCTYPE html>
+@{
+    Layout = "_Layout";
+}
 
-<html>
-<head>
-    <title>title</title>
-    <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")">
-</head>
-<body>
-<header>
-    <h3>Backend1</h3>
-    <a href="@Url.Action("Index", "Home")">Home</a>
-</header>
 <main>
     <h1>AccsessServiceDirectly</h1>
-    <p>Rand Value First: @data["first"]</p>
-    <p>Rand Value Second: @data["second"]</p>
-    <p>Add:</p>
+    <p><b>Rand Value First: @data["first"]</b></p>
+    <p><b>Rand Value Second: @data["second"]</b></p>
+    <b>Add:</b>
     <p>@data["first"] + @data["second"] = @data["sum"]</p>
-    <p>Mul:</p>
+    <b>Sub:</b>
+    <p>@data["first"] - @data["second"] = @data["subtract"]</p>
+    <b>Mul:</b>
     <p>@data["first"] * @data["second"] = @data["mul"]</p>
-    <p>Div:</p>
+    <b>Div:</b>
     <p>@data["first"] / @data["second"] = @data["divide"]</p>
 </main>
-</body>
-</html>

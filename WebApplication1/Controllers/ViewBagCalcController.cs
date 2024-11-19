@@ -14,15 +14,9 @@ public class ViewBagCalcController : Controller
     ViewBag.first = first;
     ViewBag.second = second;
     ViewBag.sum = first + second;
+    ViewBag.subtract = first - second;
     ViewBag.mul = first * second;
-    if (second != 0)
-    {
-      ViewBag.divide = first / second;
-    }
-    else
-    {
-      ViewBag.divide = "Division by zero";
-    }
+    ViewBag.divide = (second != 0) ? (first / second).ToString() : "Division by zero";
   }
 
   public IActionResult Index()

@@ -12,15 +12,9 @@ public class CalculationService
     data["first"] = first.ToString();
     data["second"] = second.ToString();
     data["sum"] = (first + second).ToString();
+    data["subtract"] = (first - second).ToString();
     data["mul"] = (first * second).ToString();
-    if (second != 0)
-    {
-      data["divide"] = (first / second).ToString();
-    }
-    else
-    {
-      data["divide"] = "Division by zero";
-    }
+    data["divide"] = (second != 0) ? (first / second).ToString() : "Division by zero";
 
     return data;
   }
